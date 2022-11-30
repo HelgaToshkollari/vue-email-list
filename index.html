@@ -6,14 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>email-list</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col p-3 ">
+                    <div class="d-flex justify-content-between ">
+                        <h1>Lista mail:</h1>
+                        <div>
+                            <ul>
+                                <li v-for=" email in emailArray "> {{email}} </li> 
+                            </ul>
+                        </div>
+                        <div>
+                            <button @click="getData()" class="btn btn-primary">
+                                click here 
+                            </button>
+                        </div>
+                       
+                    </div> 
+                   
+                </div> 
+                
+            </div>
+        </div>
 
     </div>
     <script src="js/main.js"></script>
